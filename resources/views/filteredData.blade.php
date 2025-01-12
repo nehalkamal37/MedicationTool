@@ -44,10 +44,11 @@
                     <td>{{ $script->NDC }}</td>
                     <td>{{ $script->Ins }}</td>
                     <td>{{ $script->Script }}</td>
-                    <td>{{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $script->Date)->format('m/d/Y')}}
+                    <td>
+                        {{  $script->Date}}
                     </td>
                     <td>{{ $script->RxCui }}</td>
-                    <td>{{ $script->Net_Profit }}</td>
+                    <td>{{ $script->Net_profit }}</td>
                 </tr>
 
                 

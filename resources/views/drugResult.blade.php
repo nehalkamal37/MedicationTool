@@ -54,9 +54,9 @@
                     <td>{{ $request->insurance }}</td>
                     <td>{{ $item->NDC }}</td>
                     <td>{{ $class }}</td>
-                    <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $item->Date)->format('m/d/Y') }}</td>
-                    <td>{{ $item->Script }}</td>
-                    <td>{{ $item->Net_Profit }}</td>
+                    <td>
+{{$item->Date}}</td>                    <td>{{ $item->Script }}</td>
+                    <td>{{ $item->Net_profit }}</td>
                     <td>{{ $item->ACQ }}</td>
                     <td>{{ $item->Qty }}</td>
                     <td>{{ $item->Ins_Pay }}</td>
@@ -199,10 +199,9 @@
                     <td>{{ $i->Ins}}</td>
                     <td>{{ $i->Script}}</td>
                     <td>
-                      {{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $i->Date)->format('m/d/Y')}}
-                    </td>
+{{$i->Date}}                    </td>
                     <td>{{ $i->RxCui}}</td>
-                    <td>{{ $i->Net_Profit}}</td>
+                    <td>{{ $i->Net_profit}}</td>
                     <td>{{ $i->ACQ }}</td>
                     <td>{{ $i->Qty }}</td>
                     <td>{{ $i->Ins_Pay }}</td>
