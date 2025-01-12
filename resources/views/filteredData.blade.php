@@ -45,8 +45,7 @@
                     <td>{{ $script->Ins }}</td>
                     <td>{{ $script->Script }}</td>
                     <td>
-                        {{  $script->Date}}
-                    </td>
+                        {{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $script->Date)->format('m/d/Y')}}                    </td>
                     <td>{{ $script->RxCui }}</td>
                     <td>{{ $script->Net_profit }}</td>
                 </tr>

@@ -55,7 +55,7 @@
                     <td>{{ $item->NDC }}</td>
                     <td>{{ $class }}</td>
                     <td>
-{{$item->Date}}</td>                    <td>{{ $item->Script }}</td>
+                        {{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $item->Date)->format('m/d/Y')}}</td>                    <td>{{ $item->Script }}</td>
                     <td>{{ $item->Net_profit }}</td>
                     <td>{{ $item->ACQ }}</td>
                     <td>{{ $item->Qty }}</td>
@@ -199,7 +199,8 @@
                     <td>{{ $i->Ins}}</td>
                     <td>{{ $i->Script}}</td>
                     <td>
-{{$i->Date}}                    </td>
+                        {{  \Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $i->Date)->format('m/d/Y')}}
+                                   </td>
                     <td>{{ $i->RxCui}}</td>
                     <td>{{ $i->Net_profit}}</td>
                     <td>{{ $i->ACQ }}</td>
